@@ -8,7 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: #ffd700;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background: none;
+  background: transparent;
   display: block;
   position: fixed;
 }
@@ -512,6 +511,37 @@ header .header_section .header_container .nav_menu nav #sidebar_active:checked ~
   }
 }
 
+.project_section .project_container {
+  padding: 100px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+.project_section .project_container h5 {
+  position: relative;
+  color: #D3D3D3;
+  font-size: 150%;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  width: 55%;
+  margin-left: 330px;
+  border-bottom: 1px solid #ffd700;
+  margin-bottom: 50px;
+}
+.project_section .project_container .cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 300px;
+}
+.project_section .project_container .cards .full_card {
+  width: 100%;
+}
+.project_section .project_container .cards .full_card h4 {
+  font-size: 48px;
+  color: #D3D3D3;
+}
+
 footer {
   background: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 100%) 100%);
   margin-top: 110px;
@@ -565,7 +595,7 @@ footer .contact_section .contact_container .color_box .color:nth-child(2) {
   width: 700px;
   height: 500px;
   left: 605px;
-  top: 3250px;
+  top: 4250px;
   background: purple;
 }
 footer .contact_section .contact_container .box {

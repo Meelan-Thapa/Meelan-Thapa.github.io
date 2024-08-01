@@ -9,7 +9,6 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-color: var.$gold;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    background: none;
+    background: transparent;
     display: block;
     position: fixed;
 }
@@ -591,6 +590,35 @@ header {
 
 // Skills Section Ends \\
 
+.project_section {
+    .project_container {
+        padding: 100px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+
+        h5 {
+            @include chapter_count();
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 300px;
+
+            .full_card {
+                width: 100%;
+
+                h4 {
+                    font-size: 48px;
+                    color: var.$light_gray;
+                }
+            }
+        }
+    }
+}
+
 // Contact Section Starts \\
 footer {
     background: linear-gradient(180deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
@@ -647,7 +675,7 @@ footer {
                         width: 700px;
                         height: 500px;
                         left: 605px;
-                        top: 3250px;
+                        top: 4250px;
                         background: purple;
                     }
                 }
@@ -925,8 +953,8 @@ footer {
                 color: var.$purple;
             }
 
-            .terms{
-                ul li{
+            .terms {
+                ul li {
                     text-align: right;
                 }
             }
