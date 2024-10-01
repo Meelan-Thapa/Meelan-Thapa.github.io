@@ -372,19 +372,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    // Smooth scroll to contact section
-    const contactLink = document.querySelector('a[href="#contact"]');
-    if (contactLink) {
-        contactLink.addEventListener('click', function (e) {
+    // Smooth scroll for all sections
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            const contactSection = document.querySelector('#contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
                     behavior: 'smooth'
                 });
             }
         });
-    }
+    });
 
     // Update copyright year
     const copyrightYear = document.querySelector('#copyright-year');
